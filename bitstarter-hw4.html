@@ -1,25 +1,18 @@
 <!DOCTYPE html>
-<html>
-<head>
-<script src="//code.jquery.com/jquery.min.js"></script>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <meta charset="utf-8">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <title>My First Bitstarter</title>
-
-    <!-- Check which of the following are needed -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
           rel="stylesheet" type="text/css">
-    <!-- Check which of the following are needed -->
-
-<style type="text/css">
-body { padding-top: 70px }
+    <style type="text/css">
 
       /* Large desktop */
       @media (min-width: 980px) { 
@@ -104,51 +97,32 @@ body { padding-top: 70px }
       .footer a {
         color: #ccccff;
       }
-/* demo only */
+    </style>
+  </head>
+  <body>
 
-
-</style>
-</head>
-<body>
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar"
+                  data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="brand" href="#">Bitstarter</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
       </div>
-    </nav>
-  
-
-
-    <!-- Mobile-friendly navbar adapted from example. -->
-    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+    </div>
 
     <!-- We use row-fluid inside containers to achieve a resizable layout. -->
     <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
@@ -272,39 +246,37 @@ body { padding-top: 70px }
       <div class="row-fluid faq">
           <div class="span10 offset1">
             <h3>FAQ</h3>
-                  <div class="panel-group">
-                        <div class="panel panel-default">
-                            <a class="panel-default" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
-                            <div class="panel-heading">
-                    		What's a Frequently Asked Question?
-                            </div>
-                            </a>
-                            <div id="collapseOne" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                Content
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <a class="panel-default" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                            <div class="panel-heading">
-                                My Skills
-                            </div>
-                            </a>                            
-                            <div id="collapseTwo" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                Content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-
+            <div class="accordion" id="accordion2">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseOne">
+                    What does FAQ stand for?
+                  </a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    Frequently Asked Question.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseTwo">
+                    What's a Frequently Asked Question?
+                  </a>
+                </div>
+                <div id="collapseTwo" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    A question which is commonly asked by users.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
       </div>
-
 
       <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
       <!-- http://creativecommons.org/licenses/ -->
